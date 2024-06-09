@@ -1,1 +1,108 @@
-vnbv
+/* Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for your application */
+body {
+  @apply bg-pink-100 min-h-screen flex;
+}
+
+.container {
+  @apply mx-auto p-4 flex items-center justify-center flex-col gap-5;
+}
+
+.header {
+  @apply bg-purple-600 p-4 text-white;
+}
+
+.tabs {
+  @apply mb-4 flex;
+}
+
+.tabs button {
+  @apply px-4 py-2 mr-2 rounded;
+}
+
+/* .tabs button.bg-gray-200 {
+  @apply bg-gray-200;
+} */
+/* 
+.tabs button.bg-purple-600 {
+  @apply bg-purple-600 text-white;
+} */
+
+.metrics-grid {
+  @apply mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4;
+}
+
+.metric-box {
+  @apply bg-white rounded-lg shadow-md p-4 flex flex-col items-center justify-center m-4;
+}
+
+.metric-box h3 {
+  @apply text-xl font-bold;
+}
+
+.metric-box p {
+  @apply text-2xl;
+}
+
+.carousel {
+  @apply bg-white p-4 rounded shadow-md flex justify-between items-center;
+}
+
+.calendar {
+  @apply mb-4;
+}
+
+.graph {
+  @apply mt-4;
+}
+
+button {
+  @apply bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700;
+}
+
+.sidebar {
+  @apply bg-purple-600 text-white w-64 min-h-screen p-4 fixed text-white h-full rounded-e-lg flex flex-col justify-start items-center;
+}
+
+.sidebar ul {
+  @apply list-none p-0 flex flex-col justify-start items-start;
+}
+
+.sidebar ul li {
+  @apply mb-4 flex items-center gap-4;
+}
+
+.sidebar ul li a {
+  @apply text-white no-underline hover:underline;
+}
+
+.sidebar ul li:hover {
+  @apply text-orange-500;
+}
+
+.sidebar ul li .fa-icon {
+  @apply mr-2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    @apply p-2;
+  }
+
+  .header {
+    @apply text-center;
+  }
+
+  .carousel-item {
+    @apply h-48;
+  }
+
+  .sidebar {
+    @apply w-full;
+  }
+}
